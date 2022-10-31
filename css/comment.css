@@ -1,0 +1,101 @@
+/*Это Бэм-блок, поэтому не даются никакие другие параметры*/
+/*========button=========*/
+.button{
+	border-radius: 4px;
+	letter-spacing: 0.5px;
+   font-weight: 700;
+	line-height: 1.25;
+	color: #fff;
+	display: inline-block;
+	padding: 16px 40px;
+	position: relative;
+	background: linear-gradient( 55.95deg,#F75E05 100%,#FF3F3A  0%); 
+}
+.button::before{
+	content: '';
+	position: absolute;
+	width: 100%;
+	height: 100%;
+	top: 0;
+	left: 0;
+	transition: opacity 0.3s ease 0s;
+	opacity: 0;
+	background-image: linear-gradient( 55.95deg,#c5500c 100%,#bb1f19  0%);
+	border-radius: 4px;
+	color: #fff;
+}
+.button span{
+	position: relative;
+	z-index: 2;
+}
+.button:hover::before{
+	opacity: 1;
+}
+/*========button--border=========*/
+.button--border{
+	background: transparent;
+	border: 1px solid #F75E05;
+	border-radius: 4px;
+	color:#F85B0C;
+	font-weight: 700;
+	line-height: 20px;
+	padding: 15px 40px;
+   position: relative;
+	transition: all 0.3s ease 0s;
+}
+.button--border:hover{
+	color: #fff;
+	background-image: linear-gradient( 55.95deg,#F75E05 100%,#FF3F3A  0%);
+	border-radius: 4px;
+}
+/*оформление правого и левого бордера с бордер-радиусом
+.button--border::before,
+.button--border::after{
+	content: '';
+	position: absolute;
+   top: 0;
+	left: 0;	
+	width: 100%;
+	height: 99%;
+	border-radius: 4px;
+} 
+.button--border::before{
+	left: 0;
+	border-left:1.5px solid #FF3F3A;
+}
+.button--border::after{
+	right: 0;
+	border-right: 1.5px solid #F75E05;
+}/*оформление нижнего и верхнего бордера с бордер-радиусом. т.к. псевдоклассы уже использованы, применяем псевддоклассы к спану
+.button--border span::before,
+.button--border span::after{
+	content: '';
+	background: linear-gradient( 55.95deg,#F75E05 100%,#FF3F3A  0%);
+	position: absolute;
+   right:3px;	
+	width: 97%;
+	height: 1.2px;
+	border-radius: 4px;
+}
+.button--border span::before{
+	top: 0;
+}
+.button--border span::after{
+	bottom: 0;
+}*/
+/*======block__title======*/
+.block__title {
+	display: inline-block;
+}
+.block__title-text {
+	font-weight: 700;
+	line-height: 1.5;
+	color: #1E212C;
+}
+.block__title-title {
+	font-weight: 900;
+	font-size: 46px;
+	line-height: 1.3;
+	color: #1E212C;
+	padding-top: 8px;
+}
